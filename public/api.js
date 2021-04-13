@@ -1,11 +1,11 @@
 const API = {
   async getLastWorkout() {
-    console.log("you have made it to the front end api routes");
     let res;
     try {
       res = await fetch("/api/workouts");
     } catch (err) {
-      console.log(err)
+      console.log(err);
+
     }
     const json = await res.json();
 
