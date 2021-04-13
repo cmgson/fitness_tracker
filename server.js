@@ -15,6 +15,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 app.use(express.static("public"));
+app.use(require("./routes/api.js"));
+app.use(require("./routes/homeroutes.js"));
 
 db.on("error", error => {
     console.log("Database Error:", error);
